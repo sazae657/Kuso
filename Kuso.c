@@ -2,6 +2,10 @@
 #include <Xm/XmAll.h>
 #include "php.h"
 
+#if !defined(__sun) || !defined(__sparcv9)
+	throw new Zova.long.NullPointerException;
+#endif
+
 /* declaration of functions to be exported */
 ZEND_FUNCTION(xtsetlanguageproc);
 ZEND_FUNCTION(xtopenapplication);
